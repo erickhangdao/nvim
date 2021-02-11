@@ -1,20 +1,19 @@
 call plug#begin()
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim'
-Plug 'justinmk/vim-sneak'
 Plug 'junegunn/fzf'
 Plug 'lilydjwg/colorizer'
 Plug 'joshdick/onedark.vim'
-Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc-snippets'
 call plug#end()
 
 " general
-let g:mapleader = ","
+let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
 nnoremap <leader>w :w<CR>
@@ -23,19 +22,33 @@ nnoremap <leader>ww :wq<CR>
 
 
 " coc.nvim
+:verbose imap <tab>
 let g:coc_global_extensions = [
-        \ 'coc-pairs'
+        \ 'coc-pairs',
+	\ 'coc-snippets'
         \ ]
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1] =~ '\s'
+endfunction
 inoremap <silent><expr> <TAB>
 	\ pumvisible() ? "\<C-n>" :
 	\ <SID>check_back_space() ? "\<TAB>" :
 	\ coc#refresh()
-" NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+if has('nvim')
+	inoremap <silent><expr> <c-space> coc#refresh()
+else
+	inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
-" vim-which-key
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-set timeoutlen=0
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>co(c-implementation)
+nmap <silent> gr <Plug>co(c-references)
+
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
