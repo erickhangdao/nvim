@@ -15,6 +15,7 @@ Plug 'neoclide/coc-pairs'
 Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-json'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 " general
@@ -30,7 +31,11 @@ nnoremap <leader>ww :wq<CR>
 :verbose imap <tab>
 let g:coc_global_extensions = [
         \ 'coc-pairs',
-	\ 'coc-snippets'
+	\ 'coc-snippets',
+	\ 'coc-tsserver',
+	\ 'coc-eslint',
+	\ 'coc-prettier',
+	\ 'coc-json'
         \ ]
 function! s:check_back_space() abort
 	let col = col('.') - 1
