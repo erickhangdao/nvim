@@ -23,6 +23,7 @@ let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>ww :wq<CR>
 
