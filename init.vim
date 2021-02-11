@@ -10,6 +10,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc-snippets'
+Plug 'neoclide/coc-tsserver'
+Plug 'neoclide/coc-pairs'
+Plug 'neoclide/coc-eslint'
+Plug 'neoclide/coc-prettier'
+Plug 'neoclide/coc-json'
 call plug#end()
 
 " general
@@ -47,8 +52,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>co(c-implementation)
 nmap <silent> gr <Plug>co(c-references)
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+	if (index(['vim','help'], &filetype) >= 0)
+		execute 'h '.expand('<cword>')
+        else
+		call CocAction('doHover')
+	endif
+ endfunction
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -62,3 +76,6 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
+
+" fzf
+nnoremap <leader>f :FZF<CR>
