@@ -17,7 +17,7 @@ colorscheme onedark
 set relativenumber
 nnoremap <leader>w :w<CR>
 nnoremap <leader>qq :q!<CR>
-nnoremap <leader>wq :wq<CR>
+nnoremap <leader>ww :wq<CR>
 
 
 " coc.nvim
