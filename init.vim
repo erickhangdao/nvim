@@ -3,7 +3,6 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim'
-Plug 'junegunn/fzf'
 Plug 'lilydjwg/colorizer'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
@@ -16,7 +15,6 @@ Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-json'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " general
