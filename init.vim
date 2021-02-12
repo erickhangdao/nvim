@@ -16,6 +16,7 @@ Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-json'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 " general
@@ -26,7 +27,6 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>ww :wq<CR>
-
 
 " coc.nvim
 :verbose imap <tab>
@@ -68,7 +68,7 @@ function! s:show_documentation()
  endfunction
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -82,6 +82,3 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
-
-" fzf
-nnoremap <leader>f :FZF<CR>
