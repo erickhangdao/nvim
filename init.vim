@@ -66,7 +66,7 @@ function! s:show_documentation()
  endfunction
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
