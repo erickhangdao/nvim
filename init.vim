@@ -22,6 +22,7 @@ call plug#end()
 let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
+au VimEnter * GuiPopupmenu 0
 
 " coc.nvim
 :verbose imap <tab>
