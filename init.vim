@@ -15,16 +15,13 @@ Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-json'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " general
 let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>qq :q!<CR>
-nnoremap <leader>ww :wq<CR>
 
 " coc.nvim
 :verbose imap <tab>
