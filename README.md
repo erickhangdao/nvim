@@ -1,2 +1,2 @@
 # nvim
-Just my dotfile for nvim
+Just my dotfile for nvim.
