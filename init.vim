@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'joshdick/onedark.vim'
@@ -23,6 +24,17 @@ let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
 au VimEnter * GuiPopupmenu 0
+syntax on
+let g:airline_ptheme = 'jellybeans'
+
+au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html,*.css,*.js
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=120 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
 
 " coc.nvim
 :verbose imap <tab>
