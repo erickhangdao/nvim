@@ -20,12 +20,16 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " general
-let g:mapleader = "\<Space>"
 colorscheme onedark 
 set relativenumber
-au VimEnter * GuiPopupmenu 0
 syntax on
-let g:airline_ptheme = 'jellybeans'
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+nnoremap <C-tab> :tabnext<CR>
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
 
 au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html,*.css,*.js
     \ set tabstop=4 |
@@ -74,9 +78,9 @@ function! s:show_documentation()
 		call CocAction('doHover')
 	endif
  endfunction
+
 " NERDTree
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
