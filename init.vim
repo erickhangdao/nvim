@@ -80,7 +80,7 @@ function! s:show_documentation()
  endfunction
 
 " NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-space> :NERDTreeToggle<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
