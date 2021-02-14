@@ -1,4 +1,7 @@
+let mapleader = ","
+
 call plug#begin()
+
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -8,7 +11,6 @@ Plug 'lilydjwg/colorizer'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
 Plug 'neoclide/coc-snippets'
 Plug 'neoclide/coc-tsserver'
 Plug 'neoclide/coc-pairs'
@@ -17,15 +19,34 @@ Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-json'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-sort-motion'
+
 call plug#end()
 
 " general
 colorscheme onedark 
 set relativenumber
 syntax on
+syntax enable
+filetype plugin on
+set splitbelow splitright
+set path+=**
+set wildmenu
+set nocompatible
+
+" navigation
 nnoremap <C-t> :tabnew<CR>
-nnoremap <C-w> :tabclose<CR>
+nnoremap <C-S-t> :tabclose<CR>
 nnoremap <C-tab> :tabnext<CR>
+
+map <C-s> <C-w>s
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nnoremap S :%s//g<Left><Left>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -43,13 +64,14 @@ au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html,*.css,*.js
 " coc.nvim
 :verbose imap <tab>
 let g:coc_global_extensions = [
-        \ 'coc-pairs',
+  \ 'coc-pairs',
 	\ 'coc-snippets',
 	\ 'coc-tsserver',
 	\ 'coc-eslint',
 	\ 'coc-prettier',
 	\ 'coc-json'
-        \ ]
+  \ ]
+
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1] =~ '\s'
@@ -80,7 +102,7 @@ function! s:show_documentation()
  endfunction
 
 " NERDTree
-nnoremap <C-space> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 "vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
