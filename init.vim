@@ -12,7 +12,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
 Plug 'neoclide/coc-snippets'
-
 Plug 'neoclide/coc-tsserver'
 Plug 'neoclide/coc-pairs'
 Plug 'neoclide/coc-eslint'
