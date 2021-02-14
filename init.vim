@@ -34,6 +34,7 @@ set splitbelow splitright
 set path+=**
 set wildmenu
 set nocompatible
+command! MakeTags !ctags -R .
 
 " navigation
 nnoremap <C-t> :tabnew<CR>
