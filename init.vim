@@ -39,8 +39,8 @@ set nocompatible
 command! MakeTags !ctags -R .
 
 " navigation
-nnoremap <C-t> :tabnew<CR>
-nnoremap <C-S-t> :tabclose<CR>
+nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
 nnoremap <C-tab> :tabnext<CR>
 
 map <C-s> <C-w>s
