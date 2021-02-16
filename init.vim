@@ -33,8 +33,10 @@ filetype plugin on
 set nocompatible
 set path+=**
 set relativenumber
-set splitbelow splitright
+set splitbelow 
+set splitright
 set wildmenu
+set noswapfile
 syntax enable
 syntax on
 
