@@ -2,41 +2,41 @@ let mapleader = ","
 
 call plug#begin()
 
+Plug 'alvan/vim-closetag'
+Plug 'christoomey/vim-sort-motion'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'neoclide/coc-eslint'
+Plug 'neoclide/coc-json'
+Plug 'neoclide/coc-pairs'
+Plug 'neoclide/coc-prettier'
+Plug 'neoclide/coc-snippets'
+Plug 'neoclide/coc-tsserver'
+Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdtree'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim'
-Plug 'lilydjwg/colorizer'
-Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'alvan/vim-closetag'
-Plug 'neoclide/coc-snippets'
-Plug 'neoclide/coc-tsserver'
-Plug 'neoclide/coc-pairs'
-Plug 'neoclide/coc-eslint'
-Plug 'neoclide/coc-prettier'
-Plug 'neoclide/coc-json'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-commentary'
-Plug 'christoomey/vim-sort-motion'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
 " general
 colorscheme onedark 
-set relativenumber
-syntax on
-syntax enable
-filetype plugin on
-set splitbelow splitright
-set path+=**
-set wildmenu
-set nocompatible
 command! MakeTags !ctags -R .
+filetype plugin on
+set nocompatible
+set path+=**
+set relativenumber
+set splitbelow splitright
+set wildmenu
+syntax enable
+syntax on
 
 " navigation
 nnoremap tn :tabnew<CR>
@@ -91,9 +91,9 @@ else
 endif
 
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
