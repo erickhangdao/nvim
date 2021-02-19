@@ -51,7 +51,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-nnoremap S :%s//g<Left><Left>
+nnoremap S yiw:%s/\<<C-r>"\>//g<left><left>
 
 inoremap <expr> <CR> 
    \   getline(".") =~ '\S\s*{$'                 ? "<bs><CR>{<CR>}<esc>O"
