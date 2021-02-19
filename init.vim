@@ -53,6 +53,12 @@ map <C-l> <C-w>l
 
 nnoremap S :%s//g<Left><Left>
 
+inoremap <expr> <CR> 
+   \   getline(".") =~ '\S\s*{$'                 ? "<bs><CR>{<CR>}<esc>O"
+   \ : getline('.') =~ '^\s*{$'                  ? "<CR>}<esc>O" 
+   \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<CR><esc>O<tab>"
+   \ :                                             "<CR>"
+
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
