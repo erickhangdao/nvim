@@ -51,6 +51,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
 nnoremap S yiw:%s/\<<C-r>"\>//g<left><left>
 
 inoremap <expr> <CR> 
