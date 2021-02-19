@@ -7,6 +7,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'lilydjwg/colorizer'
+Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-json'
 Plug 'neoclide/coc-pairs'
@@ -130,7 +131,7 @@ function! s:show_documentation()
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-"vim closetag
+" vim closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_filetypes = 'html,xhtml,phtml'
@@ -142,3 +143,6 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
+
+" rainbow brackets
+let g:rainbow_active = 1
