@@ -41,6 +41,16 @@ syntax enable
 syntax on
 
 " navigation
+imap <Up>    <Nop>
+imap <Down>  <Nop>
+imap <Left>  <Nop>
+imap <Right> <Nop>
+
+nmap <Up>    <Nop>
+nmap <Down>  <Nop>
+nmap <Left>  <Nop>
+nmap <Right> <Nop>
+
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
 nnoremap <C-tab> :tabnext<CR>
