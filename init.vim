@@ -97,7 +97,8 @@ let g:coc_global_extensions = [
 	\ 'coc-html',
 	\ 'coc-pyright',
 	\ 'coc-css',
-	\ 'coc-sh'
+	\ 'coc-sh',
+	\ 'coc-clangd'
   \ ]
 
 function! s:check_back_space() abort
