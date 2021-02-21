@@ -5,10 +5,11 @@ call plug#begin()
 Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-sort-motion'
 Plug 'joshdick/onedark.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'luochen1990/rainbow'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
@@ -29,14 +30,17 @@ command! MakeTags !ctags -R .
 filetype plugin on
 set nocompatible
 set path+=**
-set relativenumber
+set number relativenumber
 set splitbelow 
 set splitright
 set wildmenu
 set noswapfile
-set encoding=UTF-8
+set encoding=utf-8
 syntax enable
 syntax on
+
+" fzf
+nnoremap <leader>f :Files C:\Users<CR>
 
 " navigation
 imap <Up>    <Nop>
@@ -64,7 +68,8 @@ inoremap <C-j> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-nnoremap S yiw:%s/\<<C-r>"\>//g<left><left>
+nnoremap <C-S> yiw:%s/\<<C-r>"\>//g<left><left>
+nnoremap S :%s//g<left><left>
 
 inoremap <expr> <CR> 
    \   getline(".") =~ '\S\s*{$'                 ? "<bs><CR>{<CR>}<esc>O"
@@ -98,8 +103,10 @@ let g:coc_global_extensions = [
 	\ 'coc-pyright',
 	\ 'coc-css',
 	\ 'coc-sh',
-	\ 'coc-clangd'
-  \ ]
+	\ 'coc-clangd',
+	\ 'coc-python',
+	\ 'coc-lua'
+	\ ]
 
 function! s:check_back_space() abort
 	let col = col('.') - 1
