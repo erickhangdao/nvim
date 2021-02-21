@@ -5,21 +5,15 @@ call plug#begin()
 Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-sort-motion'
 Plug 'joshdick/onedark.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'luochen1990/rainbow'
-Plug 'neoclide/coc-eslint'
-Plug 'neoclide/coc-json'
-Plug 'neoclide/coc-pairs'
-Plug 'neoclide/coc-prettier'
-Plug 'neoclide/coc-snippets'
-Plug 'neoclide/coc-tsserver'
 Plug 'neoclide/coc.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'kien/ctrlp.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -99,7 +93,11 @@ let g:coc_global_extensions = [
 	\ 'coc-tsserver',
 	\ 'coc-eslint',
 	\ 'coc-prettier',
-	\ 'coc-json'
+	\ 'coc-json',
+	\ 'coc-html',
+	\ 'coc-pyright',
+	\ 'coc-css',
+	\ 'coc-sh'
   \ ]
 
 function! s:check_back_space() abort
