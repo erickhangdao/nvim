@@ -4,7 +4,6 @@ call plug#begin()
 
 Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-sort-motion'
-Plug 'francoiscabrol/ranger.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'luochen1990/rainbow'
@@ -15,10 +14,13 @@ Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-snippets'
 Plug 'neoclide/coc-tsserver'
 Plug 'neoclide/coc.nvim'
+Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'kien/ctrlp.vim'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -38,6 +40,7 @@ set splitbelow
 set splitright
 set wildmenu
 set noswapfile
+set encoding=UTF-8
 syntax enable
 syntax on
 
