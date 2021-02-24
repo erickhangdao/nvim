@@ -14,7 +14,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -68,7 +67,7 @@ inoremap <C-j> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-nnoremap <C-S> yiw:%s/\<<C-r>"\>//g<left><left>
+nnoremap <C-S-s> yiw:%s/\<<C-r>"\>//g<left><left>
 nnoremap S :%s//g<left><left>
 
 inoremap <expr> <CR> 
