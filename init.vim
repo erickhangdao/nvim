@@ -10,13 +10,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -54,7 +54,6 @@ nmap <Right> <Nop>
 
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
-nnoremap <C-tab> :tabnext<CR>
 
 map <C-s> <C-w>s
 map <C-h> <C-w>h
