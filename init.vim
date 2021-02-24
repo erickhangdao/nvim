@@ -39,7 +39,7 @@ syntax enable
 syntax on
 
 " fzf
-nnoremap <leader>f :Files C:\Users<CR>
+nnoremap <leader>f :Files $HOME<CR>
 
 " navigation
 imap <Up>    <Nop>
