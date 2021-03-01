@@ -35,6 +35,7 @@ set splitright
 set wildmenu
 set noswapfile
 set encoding=utf-8
+set guifont=Roboto\ Mono:h11
 syntax enable
 syntax on
 
