@@ -118,6 +118,8 @@ inoremap <silent><expr> <TAB>
 	\ coc#refresh()
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 if has('nvim')
 	inoremap <silent><expr> <c-space> coc#refresh()
