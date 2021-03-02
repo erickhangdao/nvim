@@ -7,6 +7,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -15,7 +16,6 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
-Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -45,6 +45,10 @@ nnoremap <leader>ev :e $HOMEPATH\AppData\Local\nvim\init.vim<CR>
 nnoremap <leader>h :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+
+" __buffers"
+nnoremap bn :bn<CR>
+nnoremap bd :bd<CR>
 " __fzf__
 nnoremap <leader>f :Files $HOME<CR>
 
