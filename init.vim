@@ -15,6 +15,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'tpope/vim-commentary'
+Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -174,3 +175,6 @@ let g:closetag_close_shortcut = '<leader>>'
 
 " __rainbow brackets__
 let g:rainbow_active = 1
+
+" __ctrlp__
+let g:ctrlp_working_path_mode = 'c'
