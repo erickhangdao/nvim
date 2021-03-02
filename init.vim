@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = " "
 
 call plug#begin()
 
@@ -23,7 +23,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-" general
+" __general__
 colorscheme onedark 
 command! MakeTags !ctags -R .
 filetype plugin on
@@ -39,10 +39,16 @@ set guifont=Roboto\ Mono:h11
 syntax enable
 syntax on
 
-" fzf
+" __editing__
+nnoremap <leader>ev :e $HOMEPATH\AppData\Local\nvim\init.vim<CR>
+nnoremap <leader>h :noh<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+" __fzf__
 nnoremap <leader>f :Files $HOME<CR>
 
-" navigation
+" __navigation__
+" unbind arrow keys
 imap <Up>    <Nop>
 imap <Down>  <Nop>
 imap <Left>  <Nop>
@@ -53,21 +59,25 @@ nmap <Down>  <Nop>
 nmap <Left>  <Nop>
 nmap <Right> <Nop>
 
+" rebind tabs
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
 
-map <C-s> <C-w>s
+" split navigation
+map <C-s> <C-w>v
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" insert mode navigation
 inoremap <C-k> <Up>
 inoremap <C-j> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-nnoremap <C-S-s> yiw:%s/\<<C-r>"\>//g<left><left>
+" rebind search & replace
+nnoremap <C-x> yiw:%s/\<<C-r>"\>//g<left><left>
 nnoremap S :%s//g<left><left>
 
 inoremap <expr> <CR> 
@@ -76,10 +86,11 @@ inoremap <expr> <CR>
    \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<CR><esc>O<tab>"
    \ :                                             "<CR>"
 
-" airline
+" __airline__
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 
+" auto format
 au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html,*.css,*.js
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -89,8 +100,9 @@ au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html,*.css,*.js
     \ set autoindent |
     \ set fileformat=unix |
 
-" coc.nvim
+" __coc.nvim__
 :verbose imap <tab>
+" coc extensions
 let g:coc_global_extensions = [
   \ 'coc-pairs',
 	\ 'coc-snippets',
@@ -107,6 +119,7 @@ let g:coc_global_extensions = [
 	\ 'coc-lua'
 	\ ]
 
+" tab autocompletion
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1] =~ '\s'
@@ -127,6 +140,7 @@ else
 	inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" definition navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -142,10 +156,10 @@ function! s:show_documentation()
 	endif
  endfunction
 
-" NERDTree
+" __NERDTree__
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-" vim closetag
+" __vim closetag__
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_filetypes = 'html,xhtml,phtml'
@@ -158,5 +172,5 @@ let g:closetag_regions = {
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
-" rainbow brackets
+" __rainbow brackets__
 let g:rainbow_active = 1
