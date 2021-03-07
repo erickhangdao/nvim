@@ -183,3 +183,8 @@ let g:rainbow_active = 1
 
 " __ctrlp__
 let g:ctrlp_working_path_mode = 'c'
+
+" fugitive
+nnoremap ga :Git add .<CR>
+nnoremap gc :Git commit -m ""<left>
+nnoremap gp :Git push<CR>
