@@ -37,6 +37,7 @@ set wildmenu
 set noswapfile
 set encoding=utf-8
 set guifont=Roboto\ Mono:h11
+set autochdir
 syntax enable
 syntax on
 
