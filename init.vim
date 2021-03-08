@@ -51,7 +51,7 @@ nnoremap <leader>q :q<CR>
 nnoremap bn :bn<CR>
 nnoremap bd :bd<CR>
 " __fzf__
-nnoremap <leader>f :Files $HOME<CR>
+nnoremap <leader>f :Files<CR>
 
 " __navigation__
 " unbind arrow keys
